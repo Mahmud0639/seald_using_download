@@ -21,9 +21,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Start Button
+
         binding.loadButton.setOnClickListener {
-            // আগের কোনো job থাকলে ক্যান্সেল করে দাও
+
             downloadJob?.cancel()
 
             showState(ScreenState.Loading)
@@ -48,8 +48,8 @@ class MainActivity : AppCompatActivity() {
 
         // Stop Button
         binding.stopButton.setOnClickListener {
-            downloadJob?.cancel() // Coroutine বন্ধ
-            showState(ScreenState.Error("Download cancelled by user")) // Optional: Show cancel message
+            downloadJob?.cancel()
+            showState(ScreenState.Error("Download cancelled by user"))
         }
     }
 
